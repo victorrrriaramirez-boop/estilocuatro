@@ -1,6 +1,8 @@
-# Clínica Almagro — versión vital
+# Clínica Almagro — narrativa de scroll
 
-Proyecto Next.js multipágina, responsive y preparado para Vercel.
+Proyecto Next.js multipágina, responsive y preparado para GitHub y Vercel. La portada emplea una narrativa editorial de scroll, composición sticky, indicador de progreso y transiciones respetuosas con `prefers-reduced-motion`.
+
+Las fotografías se sirven desde `public/images` en la máxima resolución disponible en el documento de origen (hasta 1408 × 768 px, y 768 × 1376 px en el retrato vertical). No existe dependencia de Google Stitch.
 
 ## Comandos
 

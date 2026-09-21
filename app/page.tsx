@@ -1,1 +1,46 @@
-import type{Metadata}from"next";import Image from"next/image";import Link from"next/link";import{CasesGrid,ServicesGrid}from"@/components/ui";export const metadata:Metadata={title:"Dentista en Chamberí",description:"Clínica dental en Chamberí con ortodoncia invisible, blanqueamiento, estética dental y atención cercana.",alternates:{canonical:"/"}};export default function Home(){return <><section className="hero"><div className="container hero-grid"><div><span className="chip">Odontología amable, moderna y sin dolor en Chamberí</span><h1 className="title">Cuidamos tu sonrisa con <span className="accent">vitalidad</span>, rigor y mucha empatía.</h1><p className="lead">Tratamientos avanzados con tecnología biomimética 3D y un equipo que te escucha de verdad.</p><div className="actions"><Link className="btn" href="/contacto">Pedir primera cita</Link><Link className="btn ghost" href="/servicios">Explorar tratamientos</Link></div><div className="micro">Atención personalizada en Chamberí, Madrid</div></div><div className="hero-photo"><Image src="/images/consulta.webp" alt="Paciente atendida por una dentista en Clínica Dental Almagro" priority width={700} height={620}/><div className="photo-badge"><strong>Consulta cercana</strong><br/><small>Planificación digital</small></div></div></div></section><section className="section mint"><div className="container"><div className="section-head"><span className="chip">Especialidades odontológicas</span><h2 className="title-md">Servicios diseñados para verte y sentirte genial</h2><p className="lead">Tratamientos planificados a tu medida en Chamberí.</p></div><ServicesGrid limit={3}/></div></section><section className="section peach"><div className="container split"><div className="portrait"><Image src="/images/equipo.webp" alt="Dra. Elena Almagro y equipo de la clínica" width={650} height={800}/><div className="portrait-badge"><strong>Dra. Elena Almagro</strong><br/><small>Dirección médica</small></div></div><div className="copy"><span className="chip" style={{background:'#ffe0df',color:'#b41d26'}}>Filosofía Almagro</span><h2 className="title-md" style={{marginTop:14}}>Sin prisas, sin juicios y, sobre todo, sin miedo al dentista.</h2><p>Nacimos en Chamberí para ofrecer una odontología transparente, pedagógica y cercana. Cada duda se resuelve con calma y cada tratamiento se explica antes de empezar.</p><div className="benefits"><div className="benefit"><strong>Atención tranquila</strong><br/>Adaptamos el ritmo de la visita.</div><div className="benefit"><strong>Escucha activa</strong><br/>Tiempo para comprender tu caso.</div><div className="benefit"><strong>Planificación digital</strong><br/>Diagnóstico y opciones claras.</div><div className="benefit"><strong>Enfoque conservador</strong><br/>Cuidamos la estructura dental.</div></div><Link className="btn" href="/sobre-nosotros">Conocer la clínica</Link></div></div></section><section className="section"><div className="container"><div className="section-head" style={{textAlign:'left',marginLeft:0}}><span className="chip" style={{background:'#fff0b8',color:'#755800'}}>Transformaciones reales</span><h2 className="title-md">Galería de sonrisas luminosas y cuidadas</h2><p className="lead">Casos clínicos documentados con planificación individualizada.</p></div><CasesGrid/></div></section><section className="section yellow"><div className="container"><div className="section-head"><span className="chip" style={{background:'#ffedaa',color:'#755800'}}>Experiencias auténticas</span><h2 className="title-md">Lo que dicen los vecinos de Chamberí</h2></div><div className="grid-2"><article className="card"><div className="stars">★★★★★</div><p className="quote">“Me explicaron cada paso con mucha calma y pude afrontar el tratamiento con tranquilidad. El acompañamiento del equipo marcó la diferencia.”</p><div className="author"><span className="avatar">MC</span><div><strong>Paciente de ortodoncia</strong><br/><small>Chamberí</small></div></div></article><article className="card"><div className="stars">★★★★★</div><p className="quote">“La simulación digital me ayudó a entender el resultado y el proceso. El trato fue cercano y las citas, muy organizadas.”</p><div className="author"><span className="avatar" style={{background:'#cef8e8',color:'#087353'}}>AG</span><div><strong>Paciente de estética dental</strong><br/><small>Madrid</small></div></div></article></div></div></section><section className="section white"><div className="container"><div className="contact-shell"><div className="contact-grid"><div><span className="chip" style={{background:'#ffe0df',color:'#b41d26'}}>Primera visita</span><h2 className="title-md" style={{marginTop:14}}>¿Hablamos de tu sonrisa?</h2><p className="lead">Escríbenos o ven a conocernos a nuestro espacio en Chamberí.</p><div className="actions"><Link className="btn" href="/contacto">Solicitar cita</Link></div></div><div className="form-panel"><h3>Cuéntanos qué necesitas</h3><p>Accede al formulario completo y te contactaremos para organizar tu visita.</p><Link className="btn ghost" href="/contacto">Ir al formulario</Link></div></div></div></div></section></>}
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { CasesGrid, ServicesGrid } from "@/components/ui";
+import { ScrollProgress } from "@/components/scroll-progress";
+
+export const metadata: Metadata = {
+  title: "Dentista en Chamberí | Clínica Dental Almagro",
+  description: "Clínica dental en Chamberí con ortodoncia invisible, estética dental, diagnóstico digital y una atención cercana.",
+  alternates: { canonical: "/" },
+};
+
+export default function Home() {
+  return <>
+    <ScrollProgress />
+    <section className="story-hero">
+      <div className="container story-hero-copy">
+        <span className="chip">Odontología amable, moderna y sin dolor en Chamberí</span>
+        <h1>Cuidamos tu sonrisa.<br/><span>Con vitalidad.</span></h1>
+        <p>Rigor clínico, tecnología digital y una forma profundamente humana de acompañarte.</p>
+        <div className="actions story-actions"><Link className="btn" href="/contacto">Pedir primera cita</Link><Link className="btn ghost" href="/servicios">Explorar tratamientos</Link></div>
+      </div>
+      <div className="hero-cinema container">
+        <Image src="/images/consulta-hq.jpg" alt="Paciente atendida por una dentista en Clínica Dental Almagro" priority fill sizes="(max-width: 900px) 100vw, 1200px" quality={100}/>
+        <div className="cinema-caption"><strong>Cero dolor.</strong><span>Atención adaptada a ti.</span></div>
+      </div>
+      <div className="scroll-cue" aria-hidden="true">Desliza para descubrir <span>↓</span></div>
+    </section>
+
+    <section className="story-statement mint"><div className="container"><p className="kicker">Especialidades odontológicas</p><h2>No se trata solo de cambiar una sonrisa.</h2><p className="statement-accent">Se trata de cambiar cómo te sientes al sonreír.</p></div></section>
+    <section className="section mint services-story"><div className="container"><ServicesGrid limit={3}/></div></section>
+
+    <section className="sticky-story peach"><div className="container sticky-grid">
+      <div className="sticky-visual"><div className="sticky-frame"><Image src="/images/equipo-hq.jpg" alt="Dra. Elena Almagro y equipo de la clínica" fill sizes="(max-width: 900px) 100vw, 48vw" quality={100}/><div className="portrait-badge"><strong>Dra. Elena Almagro</strong><br/><small>Dirección médica</small></div></div></div>
+      <div className="story-steps">
+        <article><span>01</span><h2>Primero, te escuchamos.</h2><p>Sin prisas y sin juicios. Entendemos qué te preocupa antes de hablar de tratamientos.</p></article>
+        <article><span>02</span><h2>Después, lo hacemos visible.</h2><p>El diagnóstico digital te ayuda a comprender cada opción con claridad y sin tecnicismos innecesarios.</p></article>
+        <article><span>03</span><h2>Y avanzamos contigo.</h2><p>Planificamos cada etapa de forma conservadora, transparente y adaptada a tu ritmo.</p><Link className="btn" href="/sobre-nosotros">Conocer la clínica</Link></article>
+      </div>
+    </div></section>
+
+    <section className="section gallery-story"><div className="container"><div className="section-head"><span className="chip amber-chip">Transformaciones reales</span><h2 className="title-md">Resultados que se explican por sí solos.</h2><p className="lead">Casos clínicos documentados y planificados de forma individual.</p></div><CasesGrid/></div></section>
+    <section className="story-quote yellow"><div className="container"><div className="quote-mark">“</div><h2>Volví a sonreír sin pensar en ello.</h2><p>La calma, las explicaciones y el acompañamiento marcaron la diferencia durante todo el proceso.</p><span>Paciente de ortodoncia · Chamberí</span></div></section>
+    <section className="finale"><div className="container"><p className="kicker">Tu primera visita</p><h2>Una conversación puede ser el principio de una gran sonrisa.</h2><p>Cuéntanos qué necesitas. Te ayudaremos a dar el siguiente paso con tranquilidad.</p><Link className="btn finale-btn" href="/contacto">Solicitar una cita</Link></div></section>
+  </>;
+}
